@@ -1,7 +1,7 @@
 import { getEntry } from 'astro:content';
 import type { APIContext } from 'astro';
-import { getPosts } from '~/utils/collection';
-import { postOpenGraph } from '~/utils/openGraphImage';
+import { getPosts } from '@/utils/collection';
+import { postOpenGraph } from '@/utils/openGraphImage';
 
 export async function getStaticPaths() {
 	return (await getPosts()).map((post) => ({

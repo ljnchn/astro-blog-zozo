@@ -35,6 +35,14 @@ export default defineConfig({
 	build: {
 		format: 'file',
 	},
+	vite: {
+		resolve: {
+			alias: {
+				'@': '/src',
+				'~': '/src',
+			},
+		},
+	},
 	integrations: [
 		tailwind({
 			applyBaseStyles: false,
@@ -67,6 +75,8 @@ export default defineConfig({
 		defaultStrategy: 'tap',
 	},
 	markdown: {
+		// Astro 5使用shiki来替代prism
+		syntaxHighlight: 'shiki',
 		shikiConfig: {
 			themes: {
 				light: 'vitesse-light',

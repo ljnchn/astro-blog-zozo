@@ -2,7 +2,22 @@
 import { Picture } from 'astro:assets';
 import type { CollectionEntry } from 'astro:content';
 
-type Props = CollectionEntry<'posts'>;
+// 使用更通用的类型定义
+type BaseProps = {
+	slug: string;
+	data: {
+		title: string;
+		description?: string;
+		image?: any;
+		lastmod?: Date;
+		date?: Date;
+		hide?: string[];
+		tags?: string[];
+	}
+};
+
+type Props = BaseProps;
+
 const post = Astro.props;
 let date = post.data.lastmod;
 if (post.data.hide?.includes('lastmod') && post.data.date) {

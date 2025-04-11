@@ -1,7 +1,7 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import MarkdownLayout from '~/layouts/MarkdownLayout.astro';
-import { getPosts } from '~/utils/collection';
+import MarkdownLayout from '@/layouts/MarkdownLayout.astro';
+import { getPosts } from '@/utils/collection';
 
 export async function getStaticPaths() {
 	return (await getPosts()).map((post) => ({

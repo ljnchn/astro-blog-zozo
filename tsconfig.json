@@ -1,11 +1,15 @@
 {
-	"extends": "astro/tsconfigs/strict",
+	"extends": "astro/tsconfigs/base",
 	"compilerOptions": {
 		"baseUrl": ".",
+		"lib": ["es2022", "dom", "dom.iterable"],
 		"paths": {
-			"@public/*": ["public/*"],
+			"@/*": ["src/*"],
 			"~/*": ["src/*"]
-		}
+		},
+		"jsx": "react-jsx",
+		"jsxImportSource": "react"
 	},
-	"exclude": ["dist/*"]
+	"include": [".astro/types.d.ts", "**/*"],
+	"exclude": ["node_modules", "**/node_modules/*", ".vscode", "dist"]
 }

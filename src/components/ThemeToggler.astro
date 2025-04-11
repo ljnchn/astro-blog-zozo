@@ -24,7 +24,7 @@ const themes = [
 	}
 </div>
 <script>
-	import { theme } from '~/store';
+	import { theme } from '@/store';
 	theme.subscribe((newTheme, oldTheme) => {
 		oldTheme && document.documentElement.classList.remove(oldTheme);
 		document

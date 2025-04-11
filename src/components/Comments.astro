@@ -3,14 +3,14 @@
 
 <!-- script below is bundled to <head> and excuted exactly once -->
 <script>
-	import { GiscusConfig } from '~/config';
-	import { theme } from '~/store';
+	import { GiscusConfig } from '@/config';
+	import { theme } from '@/store';
 
 	const giscusScriptTemplate = document.createElement('script');
 	Object.entries({
 		...GiscusConfig,
 		...{ src: 'https://giscus.app/client.js' },
-	}).forEach(([key, value]) => giscusScriptTemplate.setAttribute(key, value));
+	}).forEach(([key, value]) => giscusScriptTemplate.setAttribute(key, value as string));
 
 	const themeMap: Record<string, string> = {
 		light: 'noborder_light',

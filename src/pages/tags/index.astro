@@ -1,6 +1,6 @@
 ---
-import ScaffoldLayout from '~/layouts/ScaffoldLayout.astro';
-import { getPosts } from '~/utils/collection';
+import ScaffoldLayout from '@/layouts/ScaffoldLayout.astro';
+import { getPosts } from '@/utils/collection';
 
 const tagsCount = new Map<string, number>();
 const posts = await getPosts(false, 'desc');

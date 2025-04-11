@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import satori, { type SatoriOptions } from 'satori';
 import sharp from 'sharp';
-import { FooterDescription, Site, SiteDescription, SiteTitle } from '~/config';
+import { FooterDescription, Site, SiteDescription, SiteTitle } from '@/config';
 
 // satori may have bug when rendering <img src="data:image/svg+xml;base64,...">. You can convert to png like below:
 // const logoImage =

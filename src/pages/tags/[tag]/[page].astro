@@ -1,10 +1,10 @@
 ---
 import type { GetStaticPathsOptions } from 'astro';
-import Paginator from '~/components/Paginator.astro';
-import PostCard from '~/components/PostCard.astro';
-import { PageSize } from '~/config';
-import ScaffoldLayout from '~/layouts/ScaffoldLayout.astro';
-import { getPosts } from '~/utils/collection';
+import Paginator from '@/components/Paginator.astro';
+import PostCard from '@/components/PostCard.astro';
+import { PageSize } from '@/config';
+import ScaffoldLayout from '@/layouts/ScaffoldLayout.astro';
+import { getPosts } from '@/utils/collection';
 
 export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
 	const allPosts = await getPosts(false, 'desc');
